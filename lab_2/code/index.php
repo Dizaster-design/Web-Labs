@@ -223,6 +223,15 @@ if(sizeof($arr) == 3) {
 else echo "Массив состоит из ", sizeof($arr), " элементов";
 echo "\n\n";
 
+// task 19
+$pyramidSize = 20;
+echo "\n";
+for($i = 1; $i <= $pyramidSize; $i++) {
+    for($j = 1; $j <= $i; $j++) echo 'x';
+    echo "\n";
+}
+echo "\n\n";
+
 
 
 
