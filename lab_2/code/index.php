@@ -13,6 +13,7 @@ $order .= ", and 10 chicken legs";
 
 // Don't change the line below
 echo "\nYour order is: $very_bad_unclear_name.";
+echo "\n\n";
 
 
 //task 2
@@ -31,6 +32,16 @@ $lastMonth = 1187.23;
 $thisMonth = 1089.98;
 echo "Разница между расходами в этом месяце и прошлом ", $lastMonth - $thisMonth;
 echo "\n\n";
+
+//task11
+$num_languages = 4;
+$months = 11;
+$days = $months * 16;
+$days_per_language = $days / $num_languages;
+echo "В среденем ушло: ", $days_per_language, " дней(дня)";
+echo "\n\n";
+
+
 
 
 
