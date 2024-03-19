@@ -185,6 +185,50 @@ function sumDigits($number)
 $number = 13545;
 echo sumDigits($number), "\n\n";
 
+//task17
+function sumArray2D($array)
+{
+    $sum = 0;
+    foreach($array as $innerArray) {
+        foreach($innerArray as $value) {
+            $sum += $value;
+        }
+    }
+    return $sum;
+}
+$array = [[1, 2, 3], [4, 5], [6]];
+echo sumArray2D($array), "\n";
+
+$number = 1;
+$array2D = [];
+for ($i = 0; $i < 3; $i++) {
+    $innerArray = [];
+    for($j = 0; $j < 3; $j++) {
+        $innerArray[] = $number;
+        $number++;
+    }
+    $array2D[] = $innerArray;
+}
+print_r($array2D);
+
+$array = [2, 5, 3, 9];
+$result = $array[0] * $array[1] + $array[2] * $array[3];
+echo $result, "\n";
+
+$user = ['name' => "Pavel", 'surname' => "", 'Ryzhkov' => "Alexandrovich"];
+echo $user['name'], " ", $user['surname'], " ", $user['patronymic'], "\n";
+
+$date = ['year'=> 2024, 'month' => "03", 'day' => "19"];
+echo $date['year'], "-", $date['month'], "-", $date['day'], "\n";
+
+$arr = ['a','b','c','d','e'];
+echo sizeof($arr), "\n";
+
+$len = count($arr);
+echo $arr[$len-1], "\n";
+echo $arr[$len-2], "\n";
+echo "\n\n";
+
 
 
 
