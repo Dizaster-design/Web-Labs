@@ -46,7 +46,7 @@ echo 8**2;
 echo "\n\n";
 
 //task 13
-$my_num = 32;
+$my_num = 64;
 $answer = $my_num;
 $answer += 2;
 $answer *= 2;
@@ -55,6 +55,83 @@ $answer /= 2;
 $answer -= $my_num;
 echo $answer;
 echo "\n\n";
+
+//task 14
+$a = 10;
+$b = 3;
+echo $a % $b, "\n";
+if($a % $b == 0) {
+    echo "Делится\n";
+} else echo "Делится с остатком ", $a % $b, "\n\n";
+
+$st = pow(2, 10);
+echo sqrt(245), "\n";
+
+$array = [4, 2, 5, 19, 13, 0, 10];
+$count = 0;
+foreach($array as $element) $sum += pow($element, 2);
+echo $count, "\n";
+
+echo round(sqrt(379)), "\n";
+echo round(sqrt(379), 1), "\n";
+echo round(sqrt(379), 2), "\n";
+
+$rootArray = ['floor' => floor(sqrt(587)), 'ceil' => ceil(sqrt(587))];
+print_r($rootArray);
+echo "\n";
+
+$numbersArray = [4, -2, 5, 19, -130, 0, 10];
+echo min($numbersArray);
+echo "\n";
+echo max($numbersArray);
+echo "\n";
+
+echo rand(1, 100), "\n";
+
+
+$randomArray = [];
+for ($i = 0; $i < 10; $i++) {
+    $randomArray[$i] = rand();
+}
+print_r($randomArray);
+echo "\n";
+
+$a = 9;
+$b = 10;
+echo abs($a - $b), "\n";
+
+$arrayOld = [1, 2, -1, -2, 3, -3];
+$absArray = [];
+for ($i = 0; $i<sizeof($arrayOld); $i++) {
+    $absArray[$i] = abs($arrayOld[$i]);
+}
+print_r($absArray);
+echo "\n";
+
+$integerNumber = 30;
+$divisorArray = [];
+for ($i = 1; $i <= $a; $i++) {
+    if ($integerNumber % $i === 0) {
+        $divisorArray[] = $i;
+    }
+}
+print_r($divisorArray);
+
+$nums = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+$count1 = 0;
+$count2 = 0;
+for ($i = 0; $i <= sizeof($nums); $i++) {
+    $count1 += $nums[$i];
+    $count2 += 1;
+    if ($count1 > 10){
+        echo $count2;
+        break;
+    }
+}
+echo "\n\n";
+
+
+
 
 
 
