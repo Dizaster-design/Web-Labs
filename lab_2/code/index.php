@@ -41,6 +41,10 @@ $days_per_language = $days / $num_languages;
 echo "В среденем ушло: ", $days_per_language, " дней(дня)";
 echo "\n\n";
 
+//task 12
+echo 8**2;
+echo "\n\n";
+
 
 
 
