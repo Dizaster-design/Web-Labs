@@ -185,48 +185,42 @@ function sumDigits($number)
 $number = 13545;
 echo sumDigits($number), "\n\n";
 
-//task17
-function sumArray2D($array)
+// task 18
+function sumGreaterThanTen(int $a, int $b)
 {
-    $sum = 0;
-    foreach($array as $innerArray) {
-        foreach($innerArray as $value) {
-            $sum += $value;
-        }
+    if (($a + $b) > 10){
+        return ($a + $b) > 10;
     }
-    return $sum;
 }
-$array = [[1, 2, 3], [4, 5], [6]];
-echo sumArray2D($array), "\n";
+echo sumGreaterThanTen(20, 45), "\n";
 
-$number = 1;
-$array2D = [];
-for ($i = 0; $i < 3; $i++) {
-    $innerArray = [];
-    for($j = 0; $j < 3; $j++) {
-        $innerArray[] = $number;
-        $number++;
+function areEqual(int $a, int $b)
+{
+    if ($a == $b) return True;
+    else return False;
+}
+echo areEqual(2, 3), "\n";
+
+$test = 0;
+echo ($test == 0) ? "Верно\n" : "";
+
+$age = 21;
+if($age < 10 || $age > 99) echo "$age за пределами  (10-99)\n";
+else {
+    $sum = array_sum(str_split($age));
+    if ($sum <= 9) {
+        echo "Сумма цифр однозначная: $sum\n";
+    } else {
+        echo "Сумма цифр двузначна: $sum\n";
     }
-    $array2D[] = $innerArray;
 }
-print_r($array2D);
 
-$array = [2, 5, 3, 9];
-$result = $array[0] * $array[1] + $array[2] * $array[3];
-echo $result, "\n";
-
-$user = ['name' => "Pavel", 'surname' => "", 'Ryzhkov' => "Alexandrovich"];
-echo $user['name'], " ", $user['surname'], " ", $user['patronymic'], "\n";
-
-$date = ['year'=> 2024, 'month' => "03", 'day' => "19"];
-echo $date['year'], "-", $date['month'], "-", $date['day'], "\n";
-
-$arr = ['a','b','c','d','e'];
-echo sizeof($arr), "\n";
-
-$len = count($arr);
-echo $arr[$len-1], "\n";
-echo $arr[$len-2], "\n";
+$arr = [32, 321, 453];
+if(sizeof($arr) == 3) {
+    $sum = array_sum($arr);
+    echo "Массив состоит из 3 элементов. Сумма равна ", array_sum($arr), "\n";
+}
+else echo "Массив состоит из ", sizeof($arr), " элементов";
 echo "\n\n";
 
 
