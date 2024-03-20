@@ -60,7 +60,7 @@ echo "\n\n";
 $a = 10;
 $b = 3;
 echo $a % $b, "\n";
-if($a % $b == 0) {
+if(0 == $a % $b) {
     echo "Делится\n";
 } else echo "Делится с остатком ", $a % $b, "\n\n";
 
@@ -111,7 +111,7 @@ echo "\n";
 $integerNumber = 30;
 $divisorArray = [];
 for ($i = 1; $i <= $a; $i++) {
-    if ($integerNumber % $i === 0) {
+    if (0 == $integerNumber % $i) {
         $divisorArray[] = $i;
     }
 }
@@ -123,7 +123,7 @@ $count2 = 0;
 for ($i = 0; $i <= sizeof($nums); $i++) {
     $count1 += $nums[$i];
     $count2 += 1;
-    if ($count1 > 10){
+    if (10 < $count1){
         echo $count2;
         break;
     }
@@ -177,7 +177,7 @@ function sumDigits($number)
         $sum += $number % 10;
         $number = (int)($number / 10);
     }
-    if($sum > 9) {
+    if(9 < $sum) {
         return sumDigits($sum);
     }
     return $sum;
@@ -231,8 +231,8 @@ echo "\n\n";
 // task 18
 function sumGreaterThanTen(int $a, int $b)
 {
-    if (($a + $b) > 10){
-        return ($a + $b) > 10;
+    if (10 < ($a + $b)){
+        return 10 < ($a + $b);
     }
 }
 echo sumGreaterThanTen(20, 45), "\n";
@@ -245,10 +245,10 @@ function areEqual(int $a, int $b)
 echo areEqual(2, 3), "\n";
 
 $test = 0;
-echo ($test == 0) ? "Верно\n" : "";
+echo (0 == $test) ? "Верно\n" : "";
 
 $age = 21;
-if($age < 10 || $age > 99) echo "$age за пределами  (10-99)\n";
+if(10 > $age || 99 < $age) echo "$age за пределами  (10-99)\n";
 else {
     $sum = array_sum(str_split($age));
     if ($sum <= 9) {
@@ -259,7 +259,7 @@ else {
 }
 
 $arr = [32, 321, 453];
-if(sizeof($arr) == 3) {
+if(3 == sizeof($arr)) {
     $sum = array_sum($arr);
     echo "Массив состоит из 3 элементов. Сумма равна ", array_sum($arr), "\n";
 }
